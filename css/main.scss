@@ -1,0 +1,130 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+
+
+body{
+	background-color: $light-grey;
+	font-family: $font-text;
+	font-size: 100%;
+	line-height: 20px;
+	font-weight: normal;
+	width: 100%;
+	margin: 0 auto;  
+}
+h1{
+	@extend %heading;
+	text-align: left;
+	font-family: $font-head;
+	line-height: 32px;
+	padding:20px;
+}
+time{
+	text-align: center;
+	font-family: $font-head;
+	@extend %text;
+	line-height:24px;
+	color:$light-grey;
+}
+
+
+header{
+	height: 70px; 
+	width: 100%;
+	background-color: $dark-grey;
+	display: block; 
+	margin-bottom:0; 
+	
+	nav{
+		float: right; 
+	 	position:absolute;
+	 	right:160px;
+	 	top: 20px;
+	 
+		li{
+			display: inline;
+			padding: 20px;
+			
+			a{	
+				color: $a-grey; 
+				text-decoration:none;
+ 				@extend %text;
+ 				text-shadow: 0 1px 0 rgba(255,255,255,.5);
+ 				-webkit-transition: color.2s linear;
+ 				
+ 				&:hover{
+ 					color: rgba(255,255,255,.65);
+ 				}
+ 			}
+		}
+	 }
+}
+
+.btn{
+	display:block; 
+	margin: 0 auto;
+	top:20px;
+	}
+
+.content{
+	width: 100%;
+	max-width: 1000px; 
+	margin:0 auto; 
+	font-size: 13px;
+	 }
+
+aside {
+	float: left; 
+	width:25%; 
+	height: 100%;
+	background: rgba(199, 199, 199,0.8);
+	display: block;
+	padding:30px;
+	
+	p{
+		margin-top:30px
+	}
+}
+
+section{
+	display: block;
+	float: left; 
+	width: 60%; 
+	height: 100%;
+	background-color: $white;
+	padding:20px;
+	 }
+	 
+article {
+	border-bottom: 2px solid $art-grey; 
+	padding:20px;}
+
+
+button.btn {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: $red;
+	padding: 10px 30px;
+	background: -moz-linear-gradient(
+		top,
+		$white 0%,
+		$white 50%,
+		#b5b5b5);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from($white),
+		color-stop(0.50, $white),
+		to(#b5b5b5));	
+	@include border-radius (10px);
+	border: 3px solid #a4312d;
+	@include box-shadow(0px, 1px, 3px, rgba(000,000,000,0.5), 
+		inset 0px 0px 3px rgba(255,255,255,1));
+		
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,1);
+}
+
+
